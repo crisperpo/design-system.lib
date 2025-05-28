@@ -236,6 +236,13 @@
     }
   }
 }
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/roboto.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: swap;
+}
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
