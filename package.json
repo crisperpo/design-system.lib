@@ -8,6 +8,10 @@
     ".": {
       "import": "./dist/ui.es.js",
       "require": "./dist/ui.cjs.js"
+    },
+    "./styles.css": {
+      "require": "./dist/styles.css",
+      "default": "./dist/styles.css"
     }
   },
   "files": [
