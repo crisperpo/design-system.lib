@@ -34,6 +34,7 @@
   /* Semantic Colors */
   --color-background: #fff;
   --color-foreground: #666;
+  --color-heading: #333; 
   --color-link: #1a0dab;
   --color-link-hover: #0c0099;
   --color-button-foreground: #999;
@@ -44,6 +45,7 @@
 .dark {
   --color-background: #111;
   --color-foreground: #b0b0b0;
+  --color-heading: #e0e0e0;
   --color-link: #81a9ff;
   --color-link-hover: #aecbff;
   --color-button-foreground: #444;

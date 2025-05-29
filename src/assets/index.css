@@ -3,12 +3,9 @@
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
-    --ui-font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --ui-font-sans: 'Roboto', sans-serif, system-ui;
     --ui-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --ui-color-red-700: oklch(50.5% 0.213 27.518);
-    --ui-color-gray-700: oklch(37.3% 0.034 259.733);
     --ui-color-white: #fff;
     --ui-spacing: 0.25rem;
     --ui-container-xs: 20rem;
@@ -22,6 +19,8 @@
     --ui-radius-lg: 0.5rem;
     --ui-default-font-family: var(--ui-font-sans);
     --ui-default-mono-font-family: var(--ui-font-mono);
+    --ui-color-foreground: #666;
+    --ui-color-heading: #333;
   }
 }
 @layer base {
@@ -210,11 +209,11 @@
     --tw-font-weight: var(--ui-font-weight-bold);
     font-weight: var(--ui-font-weight-bold);
   }
-  .ui\:text-gray-700 {
-    color: var(--ui-color-gray-700);
+  .ui\:text-foreground {
+    color: var(--ui-color-foreground);
   }
-  .ui\:text-red-700 {
-    color: var(--ui-color-red-700);
+  .ui\:text-heading {
+    color: var(--ui-color-heading);
   }
   .ui\:shadow-lg {
     --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
@@ -237,11 +236,27 @@
   }
 }
 @font-face {
+  font-family: 'Bebas Neue';
+  src: url('/assets/BebasNeue-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: swap;
+}
+@font-face {
   font-family: 'Roboto';
   src: url('/assets/roboto.woff2') format('woff2');
   font-style: normal;
   font-weight: 100 700;
   font-display: swap;
+}
+.dark {
+  --color-background: #111;
+  --color-foreground: #b0b0b0;
+  --color-heading: #e0e0e0;
+  --color-link: #81a9ff;
+  --color-link-hover: #aecbff;
+  --color-button-foreground: #444;
+  --color-button-foreground-hover: #aaa;
 }
 @property --tw-font-weight {
   syntax: "*";

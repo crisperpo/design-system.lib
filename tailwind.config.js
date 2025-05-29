@@ -17,6 +17,7 @@ export default {
             colors: {
                 background: 'var(--color-background)',
                 foreground: 'var(--color-foreground)',
+                heading: 'var(--color-heading)',
                 link: 'var(--color-link)',
                 'link-hover': 'var(--color-link-hover)',
                 'button-foreground': 'var(--color-button-border)',
