@@ -3,9 +3,10 @@ export default {
     content: [
         './src/**/*.{js,ts,jsx,tsx}',
     ],
+    darkMode: 'class',
     important: '.ui',
     plugins: [],
-    prefix: 'ui-',
+    prefix: 'ui:',
     theme: {
         extend: {},
     },
