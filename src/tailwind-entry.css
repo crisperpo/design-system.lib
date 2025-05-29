@@ -1,1 +1,51 @@
 @import 'tailwindcss' prefix(ui);
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('/assets/BebasNeue-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/roboto.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: swap;
+}
+
+/* Register variables with Tailwind */
+@theme {
+  /* Fonts */
+  --font-expressive: 'Bebas Neue', times, system-ui;
+  --font-sans: 'Roboto', sans-serif, system-ui;
+  /* Breakpoints */
+  --breakpoint-xs: 360px;
+  /* Colors */
+  --color-fuchsia: #f11aa8;
+  --color-crimson: #e21e25;
+  --color-lavender: #7251a2;
+  --color-lime: #bed431;
+  --color-sky: #5ecae6;
+  --color-tangerine: #fe4419;
+  --color-sun: #f6c715;
+  /* Semantic Colors */
+  --color-background: #fff;
+  --color-foreground: #666;
+  --color-link: #1a0dab;
+  --color-link-hover: #0c0099;
+  --color-button-foreground: #999;
+  --color-button-foreground-hover: #333;
+}
+
+/* Override dark mode */
+.dark {
+  --color-background: #111;
+  --color-foreground: #b0b0b0;
+  --color-link: #81a9ff;
+  --color-link-hover: #aecbff;
+  --color-button-foreground: #444;
+  --color-button-foreground-hover: #aaa;
+}
