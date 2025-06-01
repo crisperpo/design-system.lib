@@ -37,8 +37,12 @@
   --color-heading: #333; 
   --color-link: #1a0dab;
   --color-link-hover: #0c0099;
-  --color-button-foreground: #999;
-  --color-button-foreground-hover: #333;
+  --color-button-primary-background: #7251a2;
+  --color-button-primary-backgroud-hover: #5f3f8c;
+  --color-button-primary-foreground: #fff;
+  --color-button-secondary-background: 'transparent';
+  --color-button-secondary-backgroud-hover: #5f3f8c;
+  --color-button-secondary-foreground: #333;
 }
 
 /* Override dark mode */
@@ -48,6 +52,10 @@
   --color-heading: #e0e0e0;
   --color-link: #81a9ff;
   --color-link-hover: #aecbff;
-  --color-button-foreground: #444;
-  --color-button-foreground-hover: #aaa;
+  --color-button-primary-background: #7251a2;
+  --color-button-primary-backgroud-hover: #5f3f8c;
+  --color-button-primary-foreground: #fff;
+  --color-button-secondary-background: 'transparent';
+  --color-button-secondary-backgroud-hover: #5f3f8c;
+  --color-button-secondary-foreground: #333;
 }
