@@ -21,7 +21,6 @@
     "dev": "vite",
     "build": "tsc -b && vite build && npm run build:css",
     "build:css": "npx @tailwindcss/cli -m -i ./src/tailwind-entry.css -o ./dist/styles.css",
-    "build:watch:css": "npx @tailwindcss/cli -m -i ./src/tailwind-entry.css -o ./dist/styles.css --watch",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "concurrently 'npm run storybook:css' 'storybook dev -p 6006'",

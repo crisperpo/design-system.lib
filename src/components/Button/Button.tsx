@@ -1,7 +1,5 @@
 import type { ButtonProps } from './types.d';
 
-import './index.css';
-
 const baseClasses = `
   ui:inline-block
   ui:cursor-pointer
