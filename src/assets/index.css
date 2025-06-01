@@ -21,6 +21,10 @@
     --ui-default-mono-font-family: var(--ui-font-mono);
     --ui-color-foreground: #666;
     --ui-color-heading: #333;
+    --ui-color-button-primary-background: #7251a2;
+    --ui-color-button-primary-foreground: #fff;
+    --ui-color-button-secondary-background: 'transparent';
+    --ui-color-button-secondary-foreground: #333;
   }
 }
 @layer base {
@@ -172,8 +176,17 @@
   .ui\:mb-2 {
     margin-bottom: calc(var(--ui-spacing) * 2);
   }
+  .ui\:inline-block {
+    display: inline-block;
+  }
+  .ui\:cursor-pointer {
+    cursor: pointer;
+  }
   .ui\:overflow-hidden {
     overflow: hidden;
+  }
+  .ui\:rounded-\[3em\] {
+    border-radius: 3em;
   }
   .ui\:rounded-lg {
     border-radius: var(--ui-radius-lg);
@@ -181,9 +194,19 @@
   .ui\:rounded-none {
     border-radius: 0;
   }
+  .ui\:border-0 {
+    border-style: var(--tw-border-style);
+    border-width: 0px;
+  }
   .ui\:border-none {
     --tw-border-style: none;
     border-style: none;
+  }
+  .ui\:bg-button-primary-background {
+    background-color: var(--ui-color-button-primary-background);
+  }
+  .ui\:bg-button-secondary-background {
+    background-color: var(--ui-color-button-secondary-background);
   }
   .ui\:bg-white {
     background-color: var(--ui-color-white);
@@ -191,8 +214,26 @@
   .ui\:px-6 {
     padding-inline: calc(var(--ui-spacing) * 6);
   }
+  .ui\:px-\[16px\] {
+    padding-inline: 16px;
+  }
+  .ui\:px-\[20px\] {
+    padding-inline: 20px;
+  }
+  .ui\:px-\[24px\] {
+    padding-inline: 24px;
+  }
   .ui\:py-4 {
     padding-block: calc(var(--ui-spacing) * 4);
+  }
+  .ui\:py-\[10px\] {
+    padding-block: 10px;
+  }
+  .ui\:py-\[11px\] {
+    padding-block: 11px;
+  }
+  .ui\:py-\[12px\] {
+    padding-block: 12px;
   }
   .ui\:font-sans {
     font-family: var(--ui-font-sans);
@@ -205,15 +246,38 @@
     font-size: var(--ui-text-xl);
     line-height: var(--tw-leading, var(--ui-text-xl--line-height));
   }
+  .ui\:text-\[12px\] {
+    font-size: 12px;
+  }
+  .ui\:text-\[14px\] {
+    font-size: 14px;
+  }
+  .ui\:text-\[16px\] {
+    font-size: 16px;
+  }
+  .ui\:leading-none {
+    --tw-leading: 1;
+    line-height: 1;
+  }
   .ui\:font-bold {
     --tw-font-weight: var(--ui-font-weight-bold);
     font-weight: var(--ui-font-weight-bold);
+  }
+  .ui\:text-button-primary-foreground {
+    color: var(--ui-color-button-primary-foreground);
+  }
+  .ui\:text-button-secondary-foreground {
+    color: var(--ui-color-button-secondary-foreground);
   }
   .ui\:text-foreground {
     color: var(--ui-color-foreground);
   }
   .ui\:text-heading {
     color: var(--ui-color-heading);
+  }
+  .ui\:shadow-\[inset_0_0_0_1px_rgba\(0\,0\,0\,0\.15\)\] {
+    --tw-shadow: inset 0 0 0 1px var(--tw-shadow-color, rgba(0,0,0,0.15));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .ui\:shadow-lg {
     --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
@@ -244,7 +308,7 @@
 }
 @font-face {
   font-family: 'Roboto';
-  src: url('/assets/roboto.woff2') format('woff2');
+  src: url('/assets/Roboto.woff2') format('woff2');
   font-style: normal;
   font-weight: 100 700;
   font-display: swap;
@@ -255,8 +319,21 @@
   --color-heading: #e0e0e0;
   --color-link: #81a9ff;
   --color-link-hover: #aecbff;
-  --color-button-foreground: #444;
-  --color-button-foreground-hover: #aaa;
+  --color-button-primary-background: #7251a2;
+  --color-button-primary-backgroud-hover: #5f3f8c;
+  --color-button-primary-foreground: #fff;
+  --color-button-secondary-background: 'transparent';
+  --color-button-secondary-backgroud-hover: #5f3f8c;
+  --color-button-secondary-foreground: #333;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
 }
 @property --tw-font-weight {
   syntax: "*";
@@ -330,6 +407,8 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-border-style: solid;
+      --tw-leading: initial;
       --tw-font-weight: initial;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;
